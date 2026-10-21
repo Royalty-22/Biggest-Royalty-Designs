@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="BIGGEST ROYALTY DESIGNS — professional flyers, banners, logos, posters and custom graphic design." />
+  <title>BIGGEST ROYALTY DESIGNS | Creative Studio</title>
+  <style>
+    :root{--red:#e31b23;--red-dark:#a90f17;--black:#0b0b0d;--panel:#151518;--muted:#b9b9c0;--white:#fff}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--black);color:var(--white);font-family:Arial,Helvetica,sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(11,11,13,.95);backdrop-filter:blur(10px);border-bottom:1px solid #29292d}
+    .nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.7px}
+    .crown{display:grid;place-items:center;background:var(--red);width:44px;height:44px;border-radius:12px;font-size:24px}
+    .brand small{display:block;color:var(--red);font-size:10px;letter-spacing:2px;margin-top:2px}
+    nav{display:flex;gap:24px;align-items:center}
+    nav a{font-size:14px;color:#ddd}
+    nav a:hover{color:var(--red)}
+    .menu{display:none;background:none;color:white;border:1px solid #444;border-radius:8px;padding:8px 12px;font-size:20px}
+    .hero{position:relative;overflow:hidden;padding:100px 0 88px;background:radial-gradient(ellipse at 82% 22%,rgba(227,27,35,.25),transparent 38%),linear-gradient(135deg,#0b0b0d 45%,#1a0b0d)}
+    .hero:after{content:"BRD";position:absolute;right:-18px;bottom:-90px;font-size:clamp(180px,35vw,420px);font-weight:900;color:rgba(255,255,255,.025);pointer-events:none}
+    .eyebrow{color:#ff555b;text-transform:uppercase;letter-spacing:3px;font-size:12px;font-weight:800}
+    h1{font-size:clamp(38px,7vw,76px);line-height:1.04;letter-spacing:-2px;margin:14px 0 20px;max-width:850px}
+    h1 span{color:var(--red)}
+    .hero p{max-width:640px;color:#d0d0d5;font-size:18px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+    .btn{display:inline-flex;justify-content:center;align-items:center;border:1px solid var(--red);border-radius:9px;padding:13px 20px;font-weight:800;transition:.2s;cursor:pointer}
+    .btn.primary{background:var(--red);color:white}
+    .btn.primary:hover{background:var(--red-dark)}
+    .btn.outline{color:white;background:transparent}
+    .btn.outline:hover{background:#241012}
+    section{padding:76px 0}
+    .section-head{margin-bottom:30px}
+    .section-head h2{font-size:clamp(28px,4vw,42px);line-height:1.15;margin:8px 0}
+    .section-head p{color:var(--muted);max-width:650px;margin:0}
+    .services{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .service{background:var(--panel);border:1px solid #29292e;border-radius:15px;padding:24px;min-height:190px}
+    .service .symbol{width:45px;height:45px;display:grid;place-items:center;background:#351014;border-radius:12px;color:#ff555b;font-size:23px;margin-bottom:15px}
+    .service h3{margin:0 0 7px;font-size:18px}
+    .service p{margin:0;color:var(--muted);font-size:14px}
+    .order-section{background:#111114;border-top:1px solid #242428;border-bottom:1px solid #242428}
+    .order-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:start}
+    .order-note{background:linear-gradient(145deg,#281013,#151518 65%);border:1px solid #482025;border-radius:16px;padding:28px}
+    .order-note h3{font-size:25px;margin:0 0 12px}
+    .order-note p,.order-note li{color:#d1cbd0}
+    .order-note ul{padding-left:20px}
+    form{background:var(--panel);border:1px solid #29292e;border-radius:16px;padding:26px}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    label{display:block;font-size:13px;color:#e8e8eb;font-weight:700;margin-bottom:7px}
+    input,select,textarea{width:100%;background:#0d0d10;color:white;border:1px solid #39393f;border-radius:8px;padding:12px;font:inherit;font-size:14px;outline:none}
+    input:focus,select:focus,textarea:focus{border-color:var(--red)}
+    textarea{min-height:115px;resize:vertical}
+    .full{grid-column:1/-1}
+    .hint{color:#a7a7af;font-size:12px;margin:10px 0 18px}
+    .portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .sample{min-height:180px;border-radius:14px;border:1px solid #333;background:linear-gradient(145deg,#231013,#121214);padding:22px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;position:relative}
+    .sample:before{content:"";position:absolute;width:130px;height:130px;border:20px solid rgba(227,27,35,.16);border-radius:50%;right:-30px;top:-35px}
+    .sample strong{font-size:22px;position:relative}
+    .sample span{color:#c6c6cc;font-size:13px;position:relative}
+    .contact{display:flex;align-items:center;justify-content:space-between;gap:24px;background:#171719;border:1px solid #303035;border-radius:16px;padding:28px}
+    .contact h2{margin:0 0 6px}
+    .contact p{color:var(--muted);margin:0}
+    footer{padding:28px 0;color:#9d9da5;border-top:1px solid #242428;font-size:13px}
+    .footer-row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    .notice{display:none;background:#122719;border:1px solid #2d6842;color:#d9ffe5;border-radius:9px;padding:12px;margin-top:14px;font-size:14px}
+    @media(max-width:850px){.services{grid-template-columns:repeat(2,1fr)}.order-layout{grid-template-columns:1fr}.portfolio-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:600px){.nav{min-height:68px}nav{display:none;position:absolute;top:68px;left:0;right:0;padding:18px 4%;background:#101012;border-bottom:1px solid #333;flex-direction:column;align-items:flex-start}nav.open{display:flex}.menu{display:block}.hero{padding:75px 0 65px}h1{letter-spacing:-1px}.services,.portfolio-grid,.form-grid{grid-template-columns:1fr}.contact{align-items:flex-start;flex-direction:column}form{padding:18px}.service{min-height:auto}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="Biggest Royalty Designs home">
+      <span class="crown">♛</span>
+      <span>BIGGEST ROYALTY<small>DESIGNS STUDIO</small></span>
+    </a>
+    <button class="menu" id="menuBtn" aria-label="Open menu">☰</button>
+    <nav id="navLinks">
+      <a href="#home">Home</a><a href="#services">Services</a><a href="#portfolio">Our Work</a><a href="#order">Place an Order</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="eyebrow">Creativity with a royal touch</div>
+      <h1>welcome to <span>Biggest Royalty Designs</span></h1>
+      <p>We turn your ideas into eye-catching designs. From flyers and banners to logos and custom graphics, let's bring your vision to life.</p>
+      <div class="actions">
+        <a class="btn primary" href="#order">Place Your Order ↗</a>
+        <a class="btn outline" href="#services">Explore Our Services</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">What we create</div>
+        <h2>Designs that make you stand out.</h2>
+        <p>Choose a service below, then send your details through the order form.</p>
+      </div>
+      <div class="services">
+        <article class="service"><div class="symbol">▧</div><h3>Flyer Designs</h3><p>Promotional flyers, birthday flyers, parties and special events.</p></article>
+        <article class="service"><div class="symbol">▤</div><h3>Banners & Posters</h3><p>Business banners, posters and print-ready designs.</p></article>
+        <article class="service"><div class="symbol">♛</div><h3>Logos & Branding</h3><p>Creative logos and visual identities for your business.</p></article>
+        <article class="service"><div class="symbol">✦</div><h3>T-shirt & Custom Designs</h3><p>Apparel graphics, invitations and other custom artwork.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Creative possibilities</div>
+        <h2>Let's create something royal.</h2>
+        <p>These are sample categories. Your own completed designs can be added here later.</p>
+      </div>
+      <div class="portfolio-grid">
+        <div class="sample"><strong>FLYER DESIGN</strong><span>Promotions • Events • Celebrations</span></div>
+        <div class="sample"><strong>BRAND IDENTITY</strong><span>Logos • Business graphics</span></div>
+        <div class="sample"><strong>PRINT DESIGN</strong><span>Banners • Posters • Apparel</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="order-section" id="order">
+    <div class="container order-layout">
+      <div>
+        <div class="section-head">
+          <div class="eyebrow">Start your project</div>
+          <h2>Place your design order.</h2>
+          <p>Tell us what you need. When you submit the form, WhatsApp will open with your order details ready to send.</p>
+        </div>
+        <div class="order-note">
+          <h3>How it works</h3>
+          <ul>
+            <li>Fill in your contact details.</li>
+            <li>Choose the type and size of design you want.</li>
+            <li>Describe your idea, colours and deadline.</li>
+            <li>Send the prepared order through WhatsApp.</li>
+          </ul>
+          <p><strong>Tip:</strong> You can send your photos, logo or reference images in the WhatsApp chat after the message opens.</p>
+        </div>
+      </div>
+      <form id="orderForm">
+        <div class="form-grid">
+          <div><label for="customerName">Your name *</label><input id="customerName" name="customerName" required placeholder="Enter your name" /></div>
+          <div><label for="customerPhone">Phone / WhatsApp *</label><input id="customerPhone" name="customerPhone" required type="tel" placeholder="Your phone number" /></div>
+          <div><label for="designType">Design type *</label><select id="designType" name="designType" required><option value="">Choose a service</option><option>Flyer</option><option>Banner</option><option>Poster</option><option>Logo</option><option>T-shirt design</option><option>Birthday / Event design</option><option>Other custom design</option></select></div>
+          <div><label for="designSize">Size (if known)</label><input id="designSize" name="designSize" placeholder="e.g. A4, 4 ft × 4 ft" /></div>
+          <div><label for="colours">Preferred colours</label><input id="colours" name="colours" placeholder="e.g. black and red" /></div>
+          <div><label for="deadline">Needed by</label><input id="deadline" name="deadline" type="date" /></div>
+          <div class="full"><label for="details">Describe the design you want *</label><textarea id="details" name="details" required placeholder="Add the wording, style, details and any instructions..."></textarea></div>
+          <div class="full"><button class="btn primary" type="submit" style="width:100%">Send Order via WhatsApp ↗</button><p class="hint">Your order details are placed into a WhatsApp message. Nothing is submitted until you press Send in WhatsApp.</p><div class="notice" id="notice" role="status">If WhatsApp did not open, check that your browser allows pop-ups or contact us directly.</div></div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container contact">
+      <div><div class="eyebrow">Let's talk</div><h2>Ready to bring your idea to life?</h2><p>Contact BIGGEST ROYALTY DESIGNS to discuss your next design.</p></div>
+      <a class="btn primary" href="https://wa.me/233506598290" target="_blank" rel="noopener">Chat on WhatsApp ↗</a>
+    </div>
+  </section>
+</main>
+<footer><div class="container footer-row"><span>© <span id="year"></span> BIGGEST ROYALTY DESIGNS. All rights reserved.</span><span>Luxury black & red • Creativity with a royal touch</span></div></footer>
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const navLinks = document.getElementById('navLinks');
+  menuBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => navLinks.classList.remove('open')));
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  document.getElementById('orderForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const value = id => document.getElementById(id).value.trim();
+    const order = [
+      'NEW DESIGN ORDER — BIGGEST ROYALTY DESIGNS',
+      '',
+      'Name: ' + value('customerName'),
+      'Phone / WhatsApp: ' + value('customerPhone'),
+      'Design type: ' + value('designType'),
+      'Size: ' + (value('designSize') || 'Not specified'),
+      'Preferred colours: ' + (value('colours') || 'Not specified'),
+      'Needed by: ' + (value('deadline') || 'Not specified'),
+      'Design details: ' + value('details')
+    ].join('\n');
+    const whatsappUrl = 'https://wa.me/233506598290?text=' + encodeURIComponent(order);
+    const newWindow = window.open(whatsappUrl, '_blank', 'noopener');
+    if (!newWindow) {
+      document.getElementById('notice').style.display = 'block';
+      window.location.href = whatsappUrl;
+    }
+  });
+</script>
+</body>
+</html>
